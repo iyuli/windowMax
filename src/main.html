@@ -1,0 +1,277 @@
+<html>
+
+<head>
+	<meta name="bing-analysis-id" content="313c1e341i1f1f39">
+	<meta charset="utf-8">
+
+	<meta http-equiv="imagetoolbar" content="no">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="renderer" content="webkit">
+	<title>组件库</title>
+	<link rel="stylesheet" href="css/dream-ui.min.css">
+	<script src="js/jquery-3.3.1.js"></script>
+	<script src="js/dream-ui.min.js"></script>
+	<link href="https://www.jq22.com/demo/jQueryFdbl201709180949/css/floating.css" rel="stylesheet" type="text/css">
+	<script src="https://www.jq22.com/demo/jQueryFdbl201709180949/js/floating.js"></script>
+	<style>
+		body {
+			background: #f5f5f5;
+		}
+
+		#container {
+			width: 100%;
+			margin: 0 auto;
+			overflow: hidden;
+			background: #fff;
+			box-shadow: #ddd 0 0 10px;
+		}
+
+		h1 {
+			text-align: center;
+			font-size: 30px;
+			margin: 30px 0;
+			display: block;
+		}
+
+		.wrapper {
+			width: calc(100% - 60px);
+			margin: 0 auto;
+			padding-top: 20px;
+		}
+
+		.wrapper>div {
+			margin-bottom: 20px;
+			margin-top: 20px;
+		}
+
+		.wrapper>div>p {
+			/* text-align: center; */
+			/* font-size: 22px; */
+			margin: 5px;
+			/* font-weight: bold; */
+		}
+
+		img.icon {
+			width: 36px;
+			min-width: 36px;
+			margin-right: 5px;
+			border-radius: 5px;
+		}
+
+		[class|=switch] {
+			position: relative;
+			display: inline-block;
+			width: 50px;
+			height: 30px;
+			border-radius: 16px;
+			line-height: 32px;
+			-webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+		}
+
+		.switch-on {
+			border: 1px solid white;
+			box-shadow: white 0px 0px 0px 16px inset;
+			transition: border 0.4s, box-shadow 0.2s, background-color 1.2s;
+			background-color: white;
+			cursor: pointer;
+		}
+
+		.slider {
+			position: absolute;
+			display: inline-block;
+			width: 30px;
+			height: 30px;
+			background: white;
+			box-shadow: 0 1px 3px rgba(0, 0, 0, 0.4);
+			border-radius: 50%;
+			left: 0;
+			top: 0;
+		}
+
+		.switch-on .slider {
+			left: 20px;
+			transition: background-color 0.4s, left 0.2s;
+		}
+
+		.switch-off {
+			border: 1px solid #dfdfdf;
+			transition: border 0.4s, box-shadow 0.4s;
+			background-color: rgb(255, 255, 255);
+			box-shadow: rgb(223, 223, 223) 0px 0px 0px 0px inset;
+			background-color: rgb(255, 255, 255);
+			cursor: pointer;
+		}
+
+		.switch-off .slider {
+			left: 0;
+			transition: background-color 0.4s, left 0.2s;
+		}
+
+		.switch-on.switch-disabled {
+			opacity: .5;
+			cursor: auto;
+		}
+
+		.switch-off.switch-disabled {
+			background-color: #F0F0F0 !important;
+			cursor: auto;
+		}
+
+		#switch>span {
+			pointer-events: none;
+		}
+
+		#switchb>span {
+			pointer-events: none;
+		}
+	</style>
+</head>
+
+<body>
+
+	<section id="container">
+
+		<div class="wrapper">
+			<div>
+				<a name="openwin" style="display: flex;  flex-direction: row;align-items: center;" href="#">
+					<img src="https://img2.baidu.com/it/u=3373472208,1844650538&amp;fm=253&amp;fmt=auto&amp;app=138&amp;f=JPEG?w=400&amp;h=301"
+						class="icon">点击选择窗口</a>
+			</div>
+
+
+			<div>
+				<p>宽度</p>
+				<style>
+					#inputNumber>* {
+						/* margin: 0 auto; */
+						margin-bottom: 5px;
+					}
+
+					#inputNumbert>* {
+						/* margin: 0 auto; */
+					}
+				</style>
+				<form action="" id="test_form">
+					<div id="inputNumber">
+
+					</div>
+				</form>
+				<p>高度</p>
+				<div id="inputNumbert" disabled="">
+					<div class="ui-inputnumber-container ui-noselect">
+						<div class="ui-inputnumber-decrease" disabled="">
+							<svg viewBox="0 0 1024 1024" version="1.1" width="17" height="17">
+								<path
+									d="M768.440022 485.814618c0 14.475689-11.743462 26.185382-26.200732 26.185382l-460.467323 0c-14.458293 0-26.167986-11.70867-26.167986-26.185382l0 0c0-14.458293 11.70867-26.183336 26.167986-26.183336l460.467323 0C756.697583 459.631282 768.440022 471.356324 768.440022 485.814618L768.440022 485.814618z"
+									fill="#666"></path>
+							</svg>
+						</div>
+						<input type="text" autocomplete="off" spellcheck="false" max="Infinity" min="-Infinity"
+							disabled="">
+						<div class="ui-inputnumber-increase">
+							<svg viewBox="0 0 1024 1024" version="1.1" width="17" height="17">
+								<path
+									d="M740.828151 485.179145 538.820344 485.179145 538.820344 283.185664c0-14.81645-11.989055-26.820855-26.820855-26.820855-14.769378 0-26.790156 12.004405-26.790156 26.820855l-0.013303 201.99348L283.200502 485.179145c-14.801101 0-26.820855 12.019755-26.820855 26.820855 0 14.81645 12.019755 26.819832 26.820855 26.819832l201.991434 0-0.013303 201.994504c0 14.800078 12.051477 26.821879 26.820855 26.821879 14.8318 0 26.820855-12.021801 26.820855-26.821879L538.820344 538.819832l201.979154 0c14.8318 0 26.820855-12.003382 26.820855-26.819832S755.631298 485.179145 740.828151 485.179145z"
+									fill="#666"></path>
+							</svg>
+						</div>
+					</div>
+				</div>
+				<script>
+					UI.inputNumber("#inputNumber", {
+						editable: true
+					});
+				</script>
+			</div>
+			<div>
+				<div style="
+				display: flex;
+				flex-direction: row;
+				flex-wrap: nowrap;
+				align-content: center;
+				justify-content: flex-start;
+			">
+					<div style="
+				margin-right: 20px;
+			">
+						<p style="margin-bottom: 5px;">窗口置顶</p>
+						<span id="switch" class="switch-off"
+							style="border-color: rgb(223, 223, 223); box-shadow: rgb(223, 223, 223) 0px 0px 0px 0px inset; background-color: rgb(255, 255, 255);"><span
+								class="slider"></span></span>
+					</div>
+
+					<div>
+						<p style="margin-bottom: 5px;">窗口边框</p>
+						<span id="switchb" class="switch-off"
+							style="border-color: rgb(223, 223, 223); box-shadow: rgb(223, 223, 223) 0px 0px 0px 0px inset; background-color: rgb(255, 255, 255);"><span
+								class="slider"></span></span>
+					</div>
+				</div>
+			</div>
+
+	</section>
+	<div style="
+    position: fixed;
+    text-align: center;
+    width: 100%;
+    top: 0;
+    background-color: #08ba61;
+    padding: 5px;
+    z-index: 999;
+"><a style=" color: #ffffff;" href="https://github.com/iyuli/windowMax" target="_blank">前往Github主页查看更新</a>
+
+	</div>
+	<script src="js/honeySwitch.js"></script>
+	<script>
+		const witchbox = document.querySelector("#inputNumber > div > input[type=text]")
+		witchbox.oninput = function () {
+			document.title = 'witch-' + witchbox.value
+		}
+		function idtab(name, img) {
+			document.querySelector("#container > div > div:nth-child(1) > a").innerHTML = '<img src="' + img + '" class="icon">' + name
+		}
+		function newdataw(width, height) {
+			document.querySelector("#inputNumber > div > input[type=text]").value = width
+			document.querySelector("#inputNumbert > div > input[type=text]").value = height
+
+		}
+		document.querySelector("#inputNumber > div").onclick = function () {
+			document.title = 'witch-' + witchbox.value
+		}
+		honeySwitch.status = function (ele) {
+			if ($(ele).hasClass("switch-on")) {
+				return true;
+			} else {
+				return false;
+			}
+		}
+		honeySwitch.status("#switch")
+		function winTop(err) {
+			if (err) {
+				honeySwitch.showOn("#switch")
+			} else {
+				honeySwitch.showOff("#switch")
+			}
+		}
+		function notice(type, msg) {
+			UI.notice[type](msg);
+		}
+
+		function winhet(err) {
+			if (err) {
+				honeySwitch.showOn("#switchb")
+			} else {
+				honeySwitch.showOff("#switchb")
+			}
+		}
+	</script>
+	<script>
+		$(document).ready(function () {
+			$("body").floating({ "theme": "panel_theme_round_hollow", "state": true, "moveState": true, "size": "auto", "position": "right-center", "tip": { "background-color": "#000000", "color": "#fff" }, "account": [{ "type": "QQ", "tip": "联系作者", "text": "1318707430", "url": "http://wpa.qq.com/msgrd?v=3&uin=1318707430&site=qq&menu=yes" }] });
+		})
+	</script>
+
+
+</body>
+
+</html>
